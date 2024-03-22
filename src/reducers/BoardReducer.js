@@ -35,6 +35,7 @@ export default function(state=boardState,action){
             return {
                 ...state,
                 board_detail: action.payload
+
             }
         case BOARD_UPDATE_OK:
             return {
