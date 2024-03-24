@@ -3,7 +3,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import {useSelector,useDispatch} from "react-redux";
 import {boardDelete} from "../../actions/BoardAction";
 
-function BoardDelete(){
+function Boarddelete(){
     const {no}=useParams()
     const nav=useNavigate()
     const pwdRef=useRef(null)
@@ -33,18 +33,9 @@ function BoardDelete(){
         <Fragment>
             <div id="commu-page">
                 <header className="page-head">
-                    <div className="header-wrapper">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-md-12">
-
-                                    <ol className="breadcrumb">
-
-                                    </ol>
-
-                                </div>
-                            </div>
-                        </div>
+                    <div className={"center"} style={{"marginTop": "-70px"}}>
+                        <span style={{"fontSize": "70px"}}>Q&A Board</span>
+                        <p style={{"color": "black"}}>문의 게시판</p>
                     </div>
                 </header>
             </div>
@@ -59,7 +50,7 @@ function BoardDelete(){
                                               ref={pwdRef}/>
                                 <input type={"button"} value={"삭제"} className={"btn-xs"}
                                        onClick={() => boardDel()}/>
-                                <button className={"btn-sm btn-danger"} onClick={() => nav(-1)}>취소</button>
+                                <button className={"btn-xs"} onClick={() => nav(-1)}>취소</button>
                             </td>
                         </tr>
 
@@ -71,4 +62,4 @@ function BoardDelete(){
     )
 }
 
-export default BoardDelete
+export default Boarddelete

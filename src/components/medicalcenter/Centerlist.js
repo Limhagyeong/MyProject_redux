@@ -30,12 +30,13 @@ export const Centerlist=()=>{
 
         <tr>
             <td className={"text-center"} width={"10%"}>{vo.cno}</td>
-            <td width={"45%"}>
-                <Link to={"/center/detail/"+vo.cno}>{vo.name}</Link>
+            <td width={"20%"}>
+                {vo.name}
             </td>
+            <td className={"text-center"} width={"35%"}>{vo.address}</td>
             <td className={"text-center"} width={"15%"}>{vo.centertype}</td>
+            <td className={"text-center"} width={"10%"}>{vo.phone}</td>
             <td className={"text-center"} width={"20%"}>{vo.opentype}</td>
-            <td className={"text-center"} width={"10%"}>{vo.opendate}</td>
         </tr>
     )
     return (
@@ -75,10 +76,11 @@ export const Centerlist=()=>{
                     <thead>
                     <tr style={{"borderTop": "1px solid black"}}>
                         <th className={"text-center"} width={"10%"}>번호</th>
-                        <th className={"text-center"} width={"45%"} >병원명</th>
+                        <th className={"text-center"} width={"20%"}>병원명</th>
+                        <th className={"text-center"} width={"35%"} style={{"whiteSpace":"pre-wrap"}}>주소</th>
                         <th className={"text-center"} width={"15%"}>구분</th>
-                        <th className={"text-center"} width={"20%"}>설립형태</th>
-                        <th className={"text-center"} width={"10%"}>개설일자</th>
+                        <th className={"text-center"} width={"10%"}>전화번호</th>
+                        <th className={"text-center"} width={"20%"}>설립</th>
                     </tr>
                     </thead>
                     <tbody>

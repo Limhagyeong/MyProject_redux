@@ -270,6 +270,28 @@ html {
     padding: 100px 0;
 }
 
+#health-page .page-head {
+	background: url(../proimg/healthlist.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 196px;
+	text-align: center;
+	color: white;
+	padding: 100px 0;
+}
+
+#commu-page .page-head {
+	background: url(../proimg/boardlist.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 196px;
+	text-align: center;
+	color: black;
+	padding: 100px 0;
+}
+
 #about-page .page-head {
 	background: url(../img/about-bg.jpg);
 	background-size: cover;
@@ -452,7 +474,7 @@ a:hover {
 }
 
 .bg-main{
-	background-image: url("../proImg/main_img.jpg");
+	background-image: url("../proimg/redux_main.png");
 	width: 100%;
 	height: 350px;
 }

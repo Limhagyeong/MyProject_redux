@@ -13,10 +13,10 @@ export const Header=()=>{
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <div className="navbar-brand">
+                        <div className="navbar-brand" style={{"marginTop":"8px"}}>
                             <span className="sr-only">Avada Pro Agency</span>
                             <Link to="/">
-                                <img src="assets/img/main_logo.png" className="img-responsive center-block" alt="logo"/>
+                                <img src="" className="img-responsive center-block" alt="Wellness Companion"/>
                             </Link>
                         </div>
                     </div>

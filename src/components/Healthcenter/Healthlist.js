@@ -3,7 +3,6 @@ import {useSelector,useDispatch} from "react-redux";
 import Pagination from "react-js-pagination";
 import {healthList} from "../../actions/HealthListAction";
 import {Link} from "react-router-dom";
-import {centerList} from "../../actions/ListAction";
 export const Healthlist=()=>{
     const [curpage,setCurpage]=useState(1)
     const [title,setTitle]=useState('')
@@ -47,7 +46,7 @@ export const Healthlist=()=>{
                 <div className="item-image">
                     <Link to={"/health/detail/"+vo.no}>
                         <img src={vo.poster} className="img-responsive center-block"
-                             alt="portfolio1"/>
+                             alt="portfolio1" style={{"width": "100%", "height": "100%"}}/>
                         <div><span><i className="fa fa-plus"></i></span></div>
                     </Link>
                 </div>
@@ -64,11 +63,11 @@ export const Healthlist=()=>{
     )
     return (
         <Fragment>
-            <div id="center-page">
+            <div id="health-page">
                 <header className="page-head">
                     <div className={"center"} style={{"marginTop": "-70px"}}>
-                        <span style={{"fontSize": "70px"}}>Medical Center</span>
-                        <p style={{"color": "white"}}>의료 센터</p>
+                        <span style={{"fontSize": "70px"}}>Health Center</span>
+                        <p style={{"color": "white"}}>운동 센터</p>
                     </div>
                 </header>
             </div>
@@ -76,13 +75,13 @@ export const Healthlist=()=>{
                 <aside>
                     <div className="tag-widget">
                         <div className="tags">
-                            <a href="#" className={type === '서울 요가센터' ? 'active' : ''}
+                            <a href="#" className={type === '서울 요가센터' || type === 1 ? 'active' : ''}
                                onClick={() => typeChange('서울 요가센터')}>서울 요가센터</a>
-                            <a href="#" className={type === '서울 필라테스센터' ? 'active' : ''}
+                            <a href="#" className={type === '서울 필라테스센터' || type === 2 ? 'active' : ''}
                                onClick={() => typeChange('서울 필라테스센터')}>서울 필라테스센터</a>
-                            <a href="#" className={type === '인천 요가센터' ? 'active' : ''}
+                            <a href="#" className={type === '인천 요가센터' || type === 3 ? 'active' : ''}
                                onClick={() => typeChange('인천 요가센터')}>인천 요가센터</a>
-                            <a href="#" className={type === '인천 필라테스센터' ? 'active' : ''}
+                            <a href="#" className={type === '인천 필라테스센터' || type === 4 ? 'active' : ''}
                                onClick={() => typeChange('인천 필라테스센터')}>인천 필라테스센터</a>
 
                         </div>
@@ -99,74 +98,14 @@ export const Healthlist=()=>{
                 </div>
             </div>
             <div className="container" style={{"width": "1500px"}}>
-                <div className="col-md-9">
+                <div className="col-md-12">
                     <div className="portfolio-item-list">
                         <div className="row">
                             {html}
                         </div>
                     </div>
                 </div>
-                <aside className="col-md-3">
 
-                    <div className="tab-widget">
-                        <h4>Tab Widget</h4>
-                        <div className="nav-tabs-default">
-                            <ul className="nav nav-tabs">
-                                <li className="active">
-                                    <a href="#popular" data-toggle="tab">
-                                        <div className="tab-widget-title">Popular Post</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#recent" data-toggle="tab">
-                                        <div className="tab-widget-title">Recent Post</div>
-                                    </a>
-                                </li>
-                            </ul>
-
-                            <div className="tab-content">
-                                <div className="tab-pane active" id="popular">
-                                    <div className="popular-post">
-                                        <img src="assets/img/tab-widget2.jpg" className="img-responsive center-block"/>
-                                        <h5 className="post-widget-heading">Image Post Title here</h5>
-                                        <span className="date">may 24,2015</span>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                    </div>
-                                    <div className="popular-post">
-                                        <img src="assets/img/tab-widget1.jpg" className="img-responsive center-block"/>
-                                        <h5 className="post-widget-heading">Image Post Title here</h5>
-                                        <span className="date">may 24,2015</span>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                    </div>
-                                </div>
-
-
-                                <div className="tab-pane" id="recent">
-                                    <div className="recent-post">
-                                        <img src="assets/img/tab-widget1.jpg" className="img-responsive center-block"/>
-                                        <h5 className="post-widget-heading">Image Post Title here</h5>
-                                        <span className="date">may 24,2015</span>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                    </div>
-                                    <div className="recent-post">
-                                        <img src="assets/img/tab-widget2.jpg" className="img-responsive center-block"/>
-                                        <h5 className="post-widget-heading">Image Post Title here</h5>
-                                        <span className="date">may 24,2015</span>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
             </div>
             <div style={{"height": "10px"}}></div>
             <div className={"text-center"}>

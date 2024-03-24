@@ -42,18 +42,9 @@ export const BoardList=()=> {
         <Fragment>
             <div id="commu-page">
                 <header className="page-head">
-                    <div className="header-wrapper">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-md-12">
-
-                                    <ol className="breadcrumb">
-
-                                    </ol>
-
-                                </div>
-                            </div>
-                        </div>
+                    <div className={"center"} style={{"marginTop": "-70px"}}>
+                        <span style={{"fontSize": "70px"}}>Q&A Board</span>
+                        <p style={{"color": "black"}}>문의 게시판</p>
                     </div>
                 </header>
             </div>
@@ -90,10 +81,10 @@ export const BoardList=()=> {
                     </tbody>
                 </table>
             </div>
-            <div className={"text-center"} style={{"marginBottom":"20px"}}>
-                <button className={"btn-sm"} onClick={()=>prevHandler()}>이전</button>
+            <div className={"text-center"} style={{"marginBottom": "20px"}}>
+                <button className={"btn-sm"} onClick={() => prevHandler()}>이전</button>
                 {curpage} page / {totalpage} pages
-                <button className={"btn-sm"} onClick={()=>nextHandler()}>다음</button>
+                <button className={"btn-sm"} onClick={() => nextHandler()}>다음</button>
             </div>
         </Fragment>
     )

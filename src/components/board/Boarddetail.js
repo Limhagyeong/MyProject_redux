@@ -14,18 +14,9 @@ function BoardDetail(){
         <Fragment>
             <div id="commu-page">
                 <header className="page-head">
-                    <div className="header-wrapper">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-md-12">
-
-                                    <ol className="breadcrumb">
-
-                                    </ol>
-
-                                </div>
-                            </div>
-                        </div>
+                    <div className={"center"} style={{"marginTop": "-70px"}}>
+                        <span style={{"fontSize": "70px"}}>Q&A Board</span>
+                        <p style={{"color": "black"}}>문의 게시판</p>
                     </div>
                 </header>
             </div>
@@ -77,7 +68,7 @@ function BoardDetail(){
                 </div>
             </div>
         </Fragment>
-)
+    )
 }
 
 export default BoardDetail
