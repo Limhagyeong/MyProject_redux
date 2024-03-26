@@ -1,5 +1,4 @@
 export const CENTER_LIST='CENTER_LIST'
-export const CENTER_DETAIL='CENTER_DETAIL'
 
 export const HEALTH_LIST='HEALTH_LIST'
 export const HEALTH_DETAIL='HEALTH_DETAIL'

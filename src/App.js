@@ -5,7 +5,6 @@ import {Header} from "./components/main/Header";
 import {Home} from "./components/main/Home";
 import {Footer} from "./components/main/Footer";
 import {Centerlist} from "./components/medicalcenter/Centerlist";
-import {CenterDetail} from "./components/medicalcenter/CenterDetail";
 import {Healthlist} from "./components/Healthcenter/Healthlist";
 import {HealthDetail} from "./components/Healthcenter/HealthDetail";
 import Boardinsert from "./components/board/Boardinsert";
@@ -21,7 +20,6 @@ function App() {
       <Routes>
         <Route path={"/"} element={<Home/>}/>
           <Route path={"/center/list"} element={<Centerlist/>}/>
-        <Route path={"/center/detail/:cno"} element={<CenterDetail/>}/>
         <Route path={"/health/list/"} element={<Healthlist/>}/>
         <Route path={"/health/detail/:no"} element={<HealthDetail/>}/>
         <Route path={"/board/insert"} element={<Boardinsert/>}/>

@@ -9,7 +9,7 @@ export const Home=()=>{
         dispatch(healthMain())
     },[])
     const health_main=useSelector((state)=> state.healths.health_main)
-    let html= health_main &&health_main.map((vo) =>
+    let html= health_main&& health_main.map((vo) =>
         <Fragment>
             <div className="col-md-4 col-sm-6">
                 <div className="portfolio-item">
